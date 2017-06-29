@@ -2,11 +2,11 @@
 
 # Create AVRDUDE folder. Create it if it does not exist
 create_avrdude_folder(){
-    AVRDUDE_DIR='/home/pi/Dexter/lib/AVRDUDE'
+    AVRDUDE_DIR='/home/linaro/pbin/AVRDUDE'
     if [ -d "$AVRDUDE_DIR" ]; then
         echo $AVRDUDE_DIR" Found!"
     else 
-        DIRECTORY='/home/pi/Dexter'
+        DIRECTORY='/home/linaro/Dexter'
         if [ -d "$DIRECTORY" ]; then
             # Will enter here if $DIRECTORY exists, even if it contains spaces
             echo $DIRECTORY" Directory Found !"
@@ -15,7 +15,7 @@ create_avrdude_folder(){
             mkdir $DIRECTORY
         fi
 
-        DIRECTORY='/home/pi/Dexter/lib'
+        DIRECTORY='/home/linaro/Dexter/lib'
         if [ -d "$DIRECTORY" ]; then
             # Will enter here if $DIRECTORY exists, even if it contains spaces
             echo $DIRECTORY" Directory Found!"
@@ -25,7 +25,7 @@ create_avrdude_folder(){
         fi
         
         pushd $DIRECTORY
-        git clone https://github.com/DexterInd/AVRDUDE.git
+        git clone https://github.com/fatihyasar/AVRDUDE.git
         popd
     fi
 }
@@ -47,11 +47,11 @@ install_avrdude(){
         ##########################################
         #Installing AVRDUDE
         ##########################################
-        pushd /home/pi/Dexter/lib/AVRDUDE/avrdude
+        pushd /home/linaro/pbin/AVRDUDE/avrdude
         
         # Install the avrdude deb package
         # No need to wget since files should be there in the avrdude folder
-        # wget https://github.com/DexterInd/AVRDUDE/raw/master/avrdude/avrdude_5.10-4_armhf.deb
+        # wget https://github.com/fatihyasar/AVRDUDE/raw/master/avrdude/avrdude_5.10-4_armhf.deb
         sudo dpkg -i avrdude_5.10-4_armhf.deb 
         sudo chmod 4755 /usr/bin/avrdude
         

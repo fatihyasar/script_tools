@@ -1,7 +1,7 @@
 #!/bin/bash
-source /home/pi/Dexter/lib/Dexter/script_tools/functions_library.sh
+source /home/linaro/pbin/script_tools/functions_library.sh
 
-PIHOME=/home/pi
+PIHOME=/home/linaro
 DEXTER=Dexter
 LIB=lib
 
@@ -41,7 +41,7 @@ else
     
     delete_folder wiringPi  
     # Install wiringPi
-    git clone https://github.com/DexterInd/wiringPi/  # Clone directories to Dexter.
+    git clone https://github.com/fatihyasar/wiringPi/  # Clone directories to Dexter.
     cd wiringPi
     sudo chmod +x ./build
     sudo ./build

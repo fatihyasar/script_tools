@@ -11,7 +11,7 @@ quiet_mode() {
   # verify quiet mode
   # returns 0 if quiet mode is enabled
   # returns 1 otherwise
-  if [ -f /home/pi/quiet_mode ]
+  if [ -f /home/linaro/quiet_mode ]
   then
     return 0
   else
