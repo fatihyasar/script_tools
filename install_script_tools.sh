@@ -9,7 +9,7 @@
 #####################################################################
 
 PIHOME=/home/linaro
-DEXTER=Dexter
+DEXTER=work
 LIB=lib
 SCRIPT=script_tools
 

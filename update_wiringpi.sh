@@ -1,8 +1,8 @@
 #!/bin/bash
-source /home/linaro/work/script_tools/functions_library.sh
+source /home/linaro/work/lib/script_tools/functions_library.sh
 
 PIHOME=/home/linaro
-DEXTER=Dexter
+DEXTER=work
 LIB=lib
 
 
