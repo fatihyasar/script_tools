@@ -2,7 +2,7 @@
 
 # Create AVRDUDE folder. Create it if it does not exist
 create_avrdude_folder(){
-    AVRDUDE_DIR='/home/linaro/pbin/AVRDUDE'
+    AVRDUDE_DIR='/home/linaro/work/AVRDUDE'
     if [ -d "$AVRDUDE_DIR" ]; then
         echo $AVRDUDE_DIR" Found!"
     else 
@@ -47,7 +47,7 @@ install_avrdude(){
         ##########################################
         #Installing AVRDUDE
         ##########################################
-        pushd /home/linaro/pbin/AVRDUDE/avrdude
+        pushd /home/linaro/work/AVRDUDE/avrdude
         
         # Install the avrdude deb package
         # No need to wget since files should be there in the avrdude folder
